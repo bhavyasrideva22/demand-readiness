@@ -15,7 +15,7 @@ export default function Assessment() {
   } = useAssessment();
   
   // Show hero if assessment hasn't started
-  if (state.currentQuestionIndex === 0 && Object.keys(state.answers).length === 0) {
+  if (!state.hasStarted) {
     return <AssessmentHero onStartAssessment={startAssessment} />;
   }
   

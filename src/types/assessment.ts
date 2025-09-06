@@ -51,6 +51,7 @@ export interface AssessmentResults {
 }
 
 export interface AssessmentState {
+  hasStarted: boolean;
   currentSection: AssessmentSection;
   currentQuestionIndex: number;
   answers: Record<string, AssessmentAnswer>;

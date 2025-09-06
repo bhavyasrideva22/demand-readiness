@@ -36,6 +36,7 @@ const sectionOrder: AssessmentSection[] = [
 
 function getInitialState(): AssessmentState {
   return {
+    hasStarted: false,
     currentSection: 'psychometric',
     currentQuestionIndex: 0,
     answers: {},
@@ -49,6 +50,7 @@ function assessmentReducer(state: AssessmentState, action: AssessmentAction): As
     case 'START_ASSESSMENT':
       return {
         ...getInitialState(),
+        hasStarted: true,
         startTime: new Date()
       };
       
